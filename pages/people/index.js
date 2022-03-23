@@ -1,12 +1,15 @@
-import { Head } from "next/head";
-import peopleJson from "../../libs/people-data";
+import Head from "next/head";
 import { useRouter } from "next/router";
 
-export default function People() {
+import peopleJson from "../../libs/people-data";
+
+const People = () => {
   const router = useRouter();
+
   const handleOnClick = (guid) => {
     router.push(`/people/${guid}`);
   };
+
   return (
     <>
       <Head>
@@ -17,6 +20,7 @@ export default function People() {
 
       <main>
         <h1>People</h1>
+
         <>
           {peopleJson.map(({ guid, name }) => {
             return (
@@ -33,4 +37,6 @@ export default function People() {
       </footer>
     </>
   );
-}
+};
+
+export default People;
