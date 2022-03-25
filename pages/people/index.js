@@ -19,7 +19,9 @@ const People = () => {
       </Head>
 
       <main>
-        <h1>People</h1>
+        <h1>List of people</h1>
+
+        <br />
 
         <>
           {peopleJson.map(({ guid, name }) => {
@@ -31,10 +33,6 @@ const People = () => {
           })}
         </>
       </main>
-
-      <footer>
-        <p>Made with ❤</p>
-      </footer>
     </>
   );
 };
